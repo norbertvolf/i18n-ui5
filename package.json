@@ -1,0 +1,49 @@
+{
+  "name": "i18n-ui5",
+  "version": "0.1.0",
+  "description": "Simplify work with translations in OpenUI5 or SAPUI5 framework. The plugin searches views and source code of project in OpenUI5 or SAPUI5 framework for translation tokens and automatically update translation file used by the framework.",
+  "main": "index.js",
+  "bin": {
+    "i18n-ui5": "./bin/i18n-ui5.js"
+  },
+  "author": "Norbert Volf",
+  "license": "MIT",
+  "keywords": [
+    "SAPUI5",
+    "OpenUI5",
+    "i18n"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/norbertvolf/i18n-ui5.git"
+  },
+  "bugs": {
+    "url": "https://github.com/norbertvolf/i18n-ui5/issues"
+  },
+  "config": {
+    "prettierFiles": "./lib/**.js package.json .eslintrc .prettierrc",
+    "eslintFiles": "./lib/**.js ./bin/*.js"
+  },
+  "scripts": {
+    "validate": "npm run validate:prettier && npm run validate:eslint",
+    "validate:prettier": "npx prettier --check $npm_package_config_prettierFiles",
+    "validate:eslint": "npx eslint $npm_package_config_eslintFiles",
+    "prettify": "npx prettier --write $npm_package_config_prettierFiles",
+    "watch": "npx nodemon -e js -x \"npm run validate\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run validate"
+    }
+  },
+  "homepage": "https://github.com/norbertvolf/i18n-ui5#readme",
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.0"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "fast-glob": "^3.2.5"
+  }
+}
