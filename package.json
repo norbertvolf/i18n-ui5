@@ -29,12 +29,8 @@
     "validate:prettier": "npx prettier --check $npm_package_config_prettierFiles",
     "validate:eslint": "npx eslint $npm_package_config_eslintFiles",
     "prettify": "npx prettier --write $npm_package_config_prettierFiles",
-    "watch": "npx nodemon -e js -x \"npm run validate\""
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run validate"
-    }
+    "watch": "npx nodemon -e js -x \"npm run validate\"",
+    "prepare": "npx husky install"
   },
   "homepage": "https://github.com/norbertvolf/i18n-ui5#readme",
   "devDependencies": {
