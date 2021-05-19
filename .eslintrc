@@ -13,7 +13,7 @@
         "no-octal": 1,
         "guard-for-in": 1,
         "no-fallthrough": 1,
-        "no-console": 0,
+        "no-console": 2,
         "default-case": 0,
         "max-nested-callbacks": [0, 2],
         "no-mixed-spaces-and-tabs": [0, false],
