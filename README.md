@@ -43,3 +43,10 @@ Use different destination file
 ```
 	npx i18n-ui5 --replace --destination i18n.properties
 ```
+
+Ignore some i18n tokens
+
+
+```
+	npx i18n-ui5 --ignore SEMANTIC_CONTROL_SAVE_AS_TILE --ignore SEMANTIC_CONTROL_SAVE_AS_TILE
+```
